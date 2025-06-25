@@ -1,20 +1,15 @@
 {
-    "manifest_version": 2,
-    "name": "LinkedIn AdBlocker",
-    "description": "Blocking ads.",
-    "version": "0.0.1",
-    "author": "<AUTHOR_NAME>",
-    "browser_action": {
-        "default_title": "LinkedIn AdBlocker"
-    },
-    "permissions": [
-        "tabs",
-        "webNavigation",
-        "https://www.linkedin.com/"
-    ],
-    "background": {
-        "scripts": [
-            "extension.js"
-        ]
-    }
+  "manifest_version": 3,
+  "name": "LinkedIn AdBlocker",
+  "version": "0.0.2",
+  "description": "Blocks 'Promoted' posts on LinkedIn.",
+  "author": "<AUTHOR NAME>",
+  "permissions": ["scripting", "tabs", "webNavigation"],
+  "host_permissions": ["https://www.linkedin.com/*"],
+  "background": {
+    "service_worker": "extension.js"
+  },
+  "action": {
+    "default_title": "LinkedIn AdBlocker"
+  }
 }
